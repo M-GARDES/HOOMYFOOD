@@ -27,7 +27,7 @@ a {
 }
 
 .container-all {
-  max-width: 100%;
+  width: 100%;
 }
 
 h2,
@@ -85,7 +85,6 @@ h1 {
 /*Header*/
 header {
   width: 100%;
-  min-width: 320px;
   padding: 21px 0;
   margin: 0px;
 }
@@ -98,6 +97,8 @@ header .logo {
   justify-content: center;
   align-items: center;
   position: relative;
+  max-width: 100%;
+  height: auto;
 }
 
 
@@ -113,6 +114,46 @@ header .logo {
   transform: translateY(-50%);
   font-size: 1.2rem;
   color: #000;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 10px; /* Ajustez la position verticale selon vos besoins */
+  right: 10px; /* Ajustez la position horizontale selon vos besoins */
+  background-color: #e08df5;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  z-index: 100;
+  margin-top: 40px;
+}
+.dropdown-menu ul {
+  list-style: none; /* Supprime les puces de liste */
+  padding: 0;
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.dropdown-menu li{
+  margin-bottom: 3px;
+}
+.hidden {
+  display: none;
+}
+
+.hamburger-menu {
+  position: absolute; /* Position absolue pour contrôler la position par rapport au parent */
+  top: 10px; /* Ajustez la position verticale selon vos besoins */
+  right: 10px; /* Ajustez la position horizontale selon vos besoins */
+  z-index: 1000; /* Ajustez le z-index pour contrôler l'empilement au-dessus des autres éléments */
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 6px;
+  background-color: black;
+  margin: 6px 0;
 }
 /*Loader*/
 .loader {
@@ -170,6 +211,7 @@ header .logo {
 }
 .function {
   font-weight: bold;
+  width: 100%;
   font-size: 15px;
   display: flex;
   flex-direction: row;
@@ -184,13 +226,13 @@ header .logo {
   margin: 0 20px 20px 40px;
   font-weight: bold;
   background-color: #ece5f6;
-  padding: 30px 50px 30px 18px;
-  margin-left: 20px;
+  padding: 20px;
+  margin-left: 10px;
   text-align: center;
   border-radius: 20px;
   position: relative;
   font-family: "Roboto", sans-serif;
-  width: 300px;
+  width: 250px;
   max-height: 78px;
 }
 .function__choice:hover {
@@ -221,6 +263,7 @@ header .logo {
   justify-content: space-around;
   flex-basis: 300px; 
   margin: 10px;
+  width: 100%;
 }
 .restaurants__title {
   padding: 50px 0 10px 22px;
@@ -231,11 +274,9 @@ header .logo {
   border-radius: 20px;
   margin-bottom: 18px;
   position: relative;
-  max-width: 280px;
-  min-width: 280px;
   transform: scale(1);
-    transition-property: transform;
-    transition-duration: 400ms;
+  transition-property: transform;
+  transition-duration: 400ms;
 }
 .restaurants__card:hover {
   opacity: 0.8;
@@ -595,8 +636,8 @@ footer .footer__logo {
 }
 @media screen and (max-width: 375px) {
   .restaurants__card {
-    max-width: 390px;
-    min-width: 340px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .function__choice {
     width: 250px;      
@@ -625,8 +666,20 @@ footer .footer__logo {
   .function {
     justify-content: center;
     align-items: center;
-    flex-direction: column}  
+    flex-direction: column}
+    
 }
+  .logo img {
+  max-width: 60%;
+  height: auto;
+}
+  .function__choice {
+  display: flex;
+  align-items: center; /* Pour centrer verticalement le contenu */
+}
+  .restaurants__card {
+    justify-content: center;
+  }
 @media screen and (min-width: 1800px) {
   .container-all {
     max-width: 100%;
