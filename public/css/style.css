@@ -332,6 +332,28 @@ header .logo {
   animation-iteration-count: infinite;
   transition: none;
 }
+.button1 {
+  background-color: #9356DC; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte */
+  padding: 5px 5px; /* Espacement interne pour le bouton */
+  border: none; /* Supprimer la bordure */
+  border-radius: 5px; /* Coins arrondis */
+  text-decoration: none; /* Supprimer la soulignement du lien */
+  display: inline-block; /* Afficher en tant que bloc en ligne */
+  cursor: pointer; /* Curseur de type main pour indiquer que c'est cliquable */
+  text-align: center; /* Centrer le texte */
+  line-height: 20px; /* Centrer verticalement le texte */
+  width: 100px; /* Ajuster la largeur selon vos préférences */
+  margin: 0 auto;
+}
+.button1:hover {
+  background-color: #FF79DA; /* Couleur de fond au survol */
+}
+.center-button {
+  display: block;
+  margin: 0 auto; /* Centrer horizontalement */
+}
+
 /*Bannière*/
 .photo__restaurant img {
   width: 100%;
@@ -655,8 +677,7 @@ footer .footer__logo {
     white-space: nowrap;
     overflow: hidden;
   }
-}
-  
+}  
 @media screen and (min-width: 650px) {
   .restaurants__card {
     margin-right: 25px;
@@ -666,12 +687,14 @@ footer .footer__logo {
   .function {
     justify-content: center;
     align-items: center;
-    flex-direction: column}
-    
+    flex-direction: column}    
 }
   .logo img {
   max-width: 60%;
   height: auto;
+}
+.fa-arrow-left:before {
+  left: 1rem; /* Vous pouvez ajuster la valeur en fonction de vos besoins */
 }
   .function__choice {
   display: flex;

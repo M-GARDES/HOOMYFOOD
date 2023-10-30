@@ -2,3 +2,4 @@ document.querySelector('.hamburger-menu').addEventListener('click', function() {
     let menu = document.querySelector('.dropdown-menu');
     menu.classList.toggle('hidden'); // Utilisez toggle pour ajouter ou supprimer la classe "hidden"
 });
+
